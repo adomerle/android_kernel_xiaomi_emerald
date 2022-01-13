@@ -162,9 +162,6 @@ ifndef KBUILD_MIXED_TREE
 all:	Image.gz
 endif
 
-export MTK_PLATFORM MTK_PROJECT
--include $(srctree)/scripts/drvgen/drvgen.mk
-
 Image: vmlinux
 	$(Q)$(MAKE) $(build)=$(boot) $(boot)/$@
 
